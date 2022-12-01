@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Montserrat&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/f0293cd988.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav"><h1>JavaSript Handson-6</h1></div>
+      <div class="Q1 Q">
+        <p><b>Find the Smaller Angle</b></p>
+        <pre>
+         var Minimal_Angle = (h, m) => 
+        {
+        let hA=((h*360)/12+(m*360)/(12*60));
+        let mA=((m*360)/60);
+        
+        let angle=Math.abs(hA-mA);
+        if(angle>180){
+            angle=360-angle;
+        }
+        return angle;
+        };
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Check whether the year is Leap year or not.</b></p>
+        <pre>
+          var Check_Leap = (year) => 
+        {
+        if(year%4===0 && ((year%100!==0)||(year%400===0))){
+            return "Leap Year" ;
+            }else{
+                return "Non Leap Year" ;
+            }
+        };
+    </pre
+        >
+        <hr />
+      </div>
+
+      <div class="Q1 Q">
+        <p><b>Perfect Number Check.</b></p>
+        <pre>
+         var Perfect_Check = (N) => 
+         {
+             let sum = 0;
+             for(let i=1;i<=N/2;i++){
+                 if(N%i===0){
+                 sum +=i;
+                 }
+             }
+             if(sum===N){
+                 return "YES";
+             }else{
+                 return "NO";
+             }
+         };
+ 
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Reverse a Number.</b></p>
+        <pre>
+       var Reverse_Number = (N) => 
+        {
+        let val1 =N.toString();
+        
+        let val2=val1.split('');
+        val2.reverse();
+        let rev='';
+        for(i=0; i< val2.length;i++){
+        rev += val2[i];
+        }
+        var num=parseInt(rev);
+        return num;
+        };
+
+    </pre
+        >
+        <hr />
+      </div>
+
+      <div class="Q1 Q">
+        <p><b>Reverse the String</b></p>
+        <pre>
+            var Reverse_String = (str) => 
+        {
+            const temp = [];
+            let reveseStr ='';
+            for(let i=str.length-1; i>=0; i--){
+            temp.push(str.charAt(i));
+            }
+            for(i=0; i< temp.length;i++){
+        reveseStr += temp[i];
+            }
+        return reveseStr;
+        };
+
+    </pre
+        >
+        <hr />
+      </div>
+      <div class="Q1 Q">
+        <p><b>Substring Check.</b></p>
+        <pre>
+       var Substring_Check = (S1, S2) => 
+     {
+     const temp = S1.split(" ");
+     for(let i=0;i < temp.length;i++){
+          if(temp[i]===S2){
+         return "YES";
+         }
+     }
+     return "NO" ;
+     };
+
+
+    </pre
+        >
+        <hr />
+      </div>
+    </div>
+  </body>
+</html>
